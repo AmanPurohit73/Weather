@@ -1,4 +1,4 @@
-const baseUrl = "http://api.weatherapi.com/v1/current.json";
+const baseUrl = "https://api.weatherapi.com/v1/current.json";
 const apiKey = "4c595ed231134985860192153250401";
 
 // Tab elements
