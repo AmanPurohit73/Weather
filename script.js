@@ -110,7 +110,6 @@ function renderWeatherInfo(weatherData) {
     weatherData.location.region || weatherData.location.country
   }`;
 
-  // Update flag URL with error handling
   countryIcon.onerror = function () {
     this.src = `https://www.countryflagicons.com/FLAT/64/${countryCode.toUpperCase()}.png`;
     this.onerror = function () {
@@ -118,7 +117,7 @@ function renderWeatherInfo(weatherData) {
     };
   };
   countryIcon.src = `https://flagcdn.com/48x36/${countryCode.toLowerCase()}.png`;
-  countryIcon.style.display = "inline"; // Reset display if it was hidden
+  countryIcon.style.display = "inline"; 
 
   desc.innerText = weatherData.current.condition.text;
   weatherIcon.src = weatherData.current.condition.icon.replace(
@@ -218,7 +217,6 @@ function checkLocationAndShowWeather() {
   }
 }
 
-// Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
   checkLocationAndShowWeather();
 
@@ -270,7 +268,6 @@ function showGeolocationError(error) {
   showError(errorMessages[error.code] || errorMessages[0], true);
 }
 
-// Add styles for error container
 const style = document.createElement("style");
 style.textContent = `
 .error-container {
